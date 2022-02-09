@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/jquery-ui.min.css">
+    <link rel="stylesheet" href="style/price_range_style.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="user-nav-wrapper">
+                <a href="#" class="header-logo-link">
+                    <img src="img/head/logo.png" alt="" class="header-logo" width="138px" height="70px">
+                </a>
+                <nav class="main-nav">
+                    <ul class="nav-items">
+                        <li class="nav-item">ИНФОРМАЦИЯ</li>
+                        <li class="nav-item"> ФОТО И ВИДЕО</li>
+                        <li class="nav-item">КАРТА ШТАТА</li>
+                        <li class="nav-item">ГОСТИНИЦЫ</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="hotels-main">
+            <div class="filters">
+                <form class="filters-form">
+                    <div class="checkbox-filter">
+                        <div class="inrfastructure-filter">
+                            <p class="filter-header">Инфраструктура:</p>
+                            <label class="checkboxes">
+                            <input type="checkbox" name="pool" checked>
+                            <span>Бассейн</span>
+                        </label>
+
+                            <label class="checkboxes">
+                            <input type="checkbox" name="parking">
+                            <span>Парковка</span>
+                        </label>
+
+                            <label class="checkboxes">
+                            <input type="checkbox" name="wifi" checked>
+                            <span>Wi-fi</span>
+                        </label>
+                        </div>
+                        <div class="housing-filter">
+                            <p class="filter-header">Тип жилья:</p>
+                            <label class="checkboxes">
+                            <input type="checkbox" name="hotel" checked>
+                            <span>Гостиница</span>
+                        </label>
+
+                            <label class="checkboxes">
+                            <input type="checkbox" name="motel">
+                            <span>Мотель</span>
+                        </label>
+
+                            <label class="checkboxes">
+                            <input type="checkbox" name="apartments" checked>
+                            <span>Апартаменты</span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="price-filter">
+                        <h3 class="filter-title">СТОИМОСТЬ В СУТКИ (Р):</h3>
+                        <div class="slider-container">
+                            <div class="shop-page-price-slider" id="slider-range">
+                                <!-- <div class="price-slider">
+                                <input type="range" min="0" max="30000" value="00">
+                            </div> -->
+                                <div class="price-slider-settings">
+                                    <!-- <span class="min-price-setting">0</span>
+                                 <div class="dash"></div>
+                                 <span class="max-price-setting">30000</span> -->
+                                    <div class="price-slider-settings-wrapper">
+                                        <span>ОТ</span>
+                                        <input type="text" min=0 max="30000" oninput="validity.valid||(value='0');" id="min_price" class="min-price-setting" />
+                                    </div>
+                                    <div class="price-slider-settings-wrapper">
+                                        <span>ДО</span>
+                                        <input type="text" min=0 max="30000" oninput="validity.valid||(value='30000');" id="max_price" class="max-price-setting" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="submit-btn">Показать</button>
+                    </div>
+                </form>
+            </div>
+            <div class="sort-and-content-items">
+                <div class="sort-options">
+                    <p class="sort-header">Найдено: 3</p>
+                    <p class="sort-text">Сортировка:</p>
+                    <ul class="sort-method-items">
+                        <li><a href="#" class="sort-method-item sort-method-item-active">По цене</a></li>
+                        <li><a href="#" class="sort-method-item">По типу</a></li>
+                        <li><a href="#" class="sort-method-item">По рейтингу</a></li>
+                    </ul>
+                    <div class="sort-by-method-items">
+                        <a class="sort-by-method-item">
+                            <svg class="up-icon" viewBox="0 0 24 24">
+                                <path d="M7,15L12,10L17,15H7Z" />
+                            </svg>
+                        </a>
+                        <a class="sort-by-method-item sort-by-method-item-active">
+
+                            <svg class="down-icon icon-active" viewBox="0 0 24 24">
+                                <path d="M7,10L12,15L17,10H7Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <ul class="content-items">
+                    <li class="content-item">
+                        <div class="content-item-wrapper">
+                            <img src="img/body/content/Layer 21.png" class="hotel-img" width="135" height="90">
+                            <div class="content-item-desc">
+                                <div class="item-desc-wrapper">
+                                    <a href="#" class="item-desc-head">Amara Resort & Spa</a>
+                                    <div class="item-desc-inner-wrapper">
+                                        <div class="item-desc-inner-item">
+                                            <p>Гостиница</p>
+                                            <a href="#" class="item-button item-button-detail">Подробнее</a>
+                                        </div>
+                                        <div class="item-desc-inner-item">
+                                            <p>от 4000 р.</p>
+                                            <a href="#" class="item-button item-button-reserve">Забронировать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-desc-rating">
+                                    <ul class="item-desc-rating-items">
+                                        <li class="item-desc-rating-item"></li>
+                                        <li class="item-desc-rating-item"></li>
+                                        <li class="item-desc-rating-item"></li>
+                                        <li class="item-desc-rating-item"></li>
+                                        <li class="item-desc-rating-item display-none"></li>
+                                    </ul>
+                                    <p class="item-desc-rating-text">Рейтинг: <span class="item-rating">8,5</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <div class="content-item-wrapper">
+                            <img src="img/body/content/Layer 89 copy.png" class="hotel-img" width="135" height="90">
+                            <div class="content-item-desc">
+                                <div class="item-desc-wrapper">
+                                    <a href="#" class="item-desc-head">Desert Quail Inn</a>
+                                    <div class="item-desc-inner-wrapper">
+                                        <div class="item-desc-inner-item">
+                                            <p>Мотель</p>
+                                            <a href="#" class="item-button item-button-detail">Подробнее</a>
+                                        </div>
+                                        <div class="item-desc-inner-item">
+                                            <p>от 3000 р.</p>
+                                            <a href="#" class="item-button item-button-reserve">Забронировать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-desc-rating">
+                                    <ul class="item-desc-rating-items">
+                                        <li class="item-desc-rating-item"></li>
+                                        <li class="item-desc-rating-item"></li>
+                                        <li class="item-desc-rating-item"></li>
+                                        <li class="item-desc-rating-item display-none"></li>
+                                        <li class="item-desc-rating-item display-none"></li>
+                                    </ul>
+                                    <p class="item-desc-rating-text">Рейтинг: <span class="item-rating">8,9</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="content-item">
+                        <div class="content-item-wrapper">
+                            <img src="img/body/content/Layer 22.png" class="hotel-img" width="135" height="90">
+                            <div class="content-item-desc">
+                                <div class="item-desc-wrapper">
+                                    <a href="#" class="item-desc-head">Villas at Poco Diablo</a>
+                                    <div class="item-desc-inner-wrapper">
+                                        <div class="item-desc-inner-item">
+                                            <p>Апартаменты</p>
+                                            <a href="#" class="item-button item-button-detail">Подробнее</a>
+                                        </div>
+                                        <div class="item-desc-inner-item">
+                                            <p>от 2000 р.</p>
+                                            <a href="#" class="item-button item-button-reserve">Забронировать</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-desc-rating">
+                                    <ul class="item-desc-rating-items">
+                                        <li class="item-desc-rating-item"></li>
+                                        <li class="item-desc-rating-item"></li>
+                                        <li class="item-desc-rating-item display-none"></li>
+                                        <li class="item-desc-rating-item display-none"></li>
+                                        <li class="item-desc-rating-item display-none"></li>
+                                    </ul>
+                                    <p class="item-desc-rating-text">Рейтинг: <span class="item-rating">9,2</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-visit">
+                <a href="#" class="footer-visit-link">#visitSEDONA</a>
+            </div>
+            <div class="footer-social">
+                <a class="social-btn social-btn-tw" href="#"></a>
+                <a class="social-btn social-btn-fb" href="#"></a>
+                <a class="social-btn social-btn-yt" href="#"></a>
+            </div>
+            <div class="htmlacademy-logo">
+                <span>WEBSITE by</span>
+                <a href="" class="htmlacademy-link">
+                    <img src="img/foot/logo_name.png" alt="" class="header-logo" width="115px" height="41px">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/price_range_script.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

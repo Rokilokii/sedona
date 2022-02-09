@@ -1,15 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    Hello World!
+    <div class="container">
+        <header>
+            <div class="user-nav-wrapper">
+                <a href="#" class="header-logo-link">
+                    <img src="img/head/logo.png" alt="" class="header-logo" width="138px" height="70px">
+                </a>
+                <nav class="main-nav">
+                    <ul class="nav-items">
+                        <li class="nav-item">ИНФОРМАЦИЯ</li>
+                        <li class="nav-item">ФОТО И ВИДЕО</li>
+                        <li class="nav-item">КАРТА ШТАТА</li>
+                        <li class="nav-item">ГОСТИНИЦЫ</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="welcome-image">
+                <!-- <img src="img/mainbackground.png" alt="" class="main-welcome-image" width="1200px" height="773px"> -->
+                <img src="img/head/bg1.jpg" alt="" class="main-welcome-image" width="1200px" height="510px">
+            </div>
+            <h4 class="main-title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h4>
+            <p class="main-desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+            <div class="real-city">
+                <div class="real-city-text">
+                    <p class="real-city-title">НАСТОЯЩИЙ<br>ГОРОДОК</p>
+                    <p class="real-city-desc">— №1 —</p>
+                    <p class="real-city-desc">СЕДОНА — НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+                </div>
+                <img class="real-city-img" src="img/body/advantages/Layer 10.png" alt="" width="800" height="256px">
+            </div>
+            <div class="advantages">
+                <ul class="advantages-items">
+                    <li class="advantages-item">
+                        <div class="advantages-img-wrapper">
+                            <img src="img/body/advantages/icon-1.png" alt="" class="advantages-img" width="75px" height="72px">
+                        </div>
+                        <p class="advantages-title">Жилье</p>
+                        <p class="advantages-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                    </li>
+                    <li class="advantages-item">
+                        <div class="advantages-img-wrapper">
+                            <img src="img/body/advantages/icon-2.png" alt="" class="advantages-img" width="74px" height="70px">
+                        </div>
+                        <p class="advantages-title">ЕДА</p>
+                        <p class="advantages-text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                    </li>
+                    <li class="advantages-item">
+                        <div class="advantages-img-wrapper">
+                            <img src="img/body/advantages/icon-3.png" alt="" class="advantages-img" width="64px" height="76px">
+                        </div>
+                        <p class="advantages-title">СУВЕНИРЫ</p>
+                        <p class="advantages-text">Не только китайского, но и местного производства!</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="diablo-bridge">
+                <img class="diablo-bridge-img" src="img/body/advantages/Layer 5.png" alt="" width="800" height="256px">
+                <div class="diablo-bridge-text">
+                    <p class="diablo-bridge-title">ТАМ ЕСТЬ<br>Мост дьявола</p>
+                    <p class="diablo-bridge-desc">— №2 —</p>
+                    <p class="diablo-bridge-desc">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                </div>
+            </div>
+            <div class="advantages advantages-second">
+                <ul class="advantages-items">
+                    <li class="advantages-item">
+                        <p class="advantages-title">НЕБОЛЬШАЯ<br>ПЛОЩАДЬ</p>
+                        <p class="advantages-numbering">— №3 —</p>
+                        <p class="advantages-text">ВСЕ достопримечательности находятся очень близко</p>
+                    </li>
+                    <li class="advantages-item">
+                        <p class="advantages-title">КРАСИВАЯ<br>ДОРОГА</p>
+                        <p class="advantages-numbering">— №4 —</p>
+                        <p class="advantages-text">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+                    </li>
+                    <li class="advantages-item">
+                        <p class="advantages-title">МАЛО<br>ТУРИСТОВ</p>
+                        <p class="advantages-numbering">— №5 —</p>
+                        <p class="advantages-text">Большинство едет в гранд каньон и толпится там</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <p class="search-title">Заинтересовались?</p>
+                <p class="search-text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+                <button class="search-btn">Поиск гостиницы в седоне</button>
+                <div class="search-popup">
+                    <div class="arrival-date">
+                        <label for="arrival-input" class="popup-label">Дата заезда:</label>
+                        <input type="text" id="arrival-input" name="arrival-date" placeholder="24 Апреля 2017" class="popup-input popup-input-date">
+                        <button type="button" class="popup-date-input">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7,12H9V14H7V12M21,6V20A2,2 0 0,1 19,22H5C3.89,22 3,21.1 3,20V6A2,2 0 0,1 5,4H6V2H8V4H16V2H18V4H19A2,2 0 0,1 21,6M5,8H19V6H5V8M19,20V10H5V20H19M15,14V12H17V14H15M11,14V12H13V14H11M7,16H9V18H7V16M15,18V16H17V18H15M11,18V16H13V18H11Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="departure-date">
+                        <label for="departure-input" class="popup-label">Дата Выезда:</label>
+                        <input type="text" id="departure-input" name="departure-date" placeholder="4 июля 2017" class="popup-input popup-input-date">
+                        <button type="button" class="popup-date-input">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7,12H9V14H7V12M21,6V20A2,2 0 0,1 19,22H5C3.89,22 3,21.1 3,20V6A2,2 0 0,1 5,4H6V2H8V4H16V2H18V4H19A2,2 0 0,1 21,6M5,8H19V6H5V8M19,20V10H5V20H19M15,14V12H17V14H15M11,14V12H13V14H11M7,16H9V18H7V16M15,18V16H17V18H15M11,18V16H13V18H11Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="amount-people">
+                        <div class="amount-people-wrapper">
+                            <label for="adult" class="amount-people-label popup-label">Взрослые:</label>
+                            <button type="button" class="amount-people-button input-button-minus" id="amount-adult-minus"></button>
+                            <input type="text" min="1" max="10" name="adult" value="2" id="adult" class="popup-input popup-input-num">
+                            <button type="button" class="amount-people-button input-button-plus" id="amount-adult-plus"></button>
+                        </div>
+                        <div class="amount-people-wrapper">
+                            <label for="children" class="amount-people-label popup-label">Дети:</label>
+                            <button type="button" class="amount-people-button input-button-minus" id="amount=children-minus"></button>
+                            <input type="text" min="0" max="10" name="children" value="0" id="children" class="popup-input popup-input-num">
+                            <button type="button" class="amount-people-button input-button-plus" id="amount-children-plus"></button>
+                        </div>
+                    </div>
+                    <div class="submit-btb">
+                        <button type="submit" class="submit-popup-button">Найти</button>
+                    </div>
+                </div>
+            </div>
+            <div id="map"></div>
+        </main>
+        <footer class="footer">
+            <div class="footer-visit">
+                <a href="#" class="footer-visit-link">#visitSEDONA</a>
+            </div>
+            <div class="footer-social">
+                <a class="social-btn social-btn-tw" href="#"></a>
+                <a class="social-btn social-btn-fb" href="#"></a>
+                <a class="social-btn social-btn-yt" href="#"></a>
+            </div>
+            <div class="htmlacademy-logo">
+                <span>WEBSITE by</span>
+                <a href="" class="htmlacademy-link">
+                    <img src="img/foot/logo_name.png" alt="" class="header-logo" width="115px" height="41px">
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?&callback=initMap&libraries=&v=weekly" async></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
